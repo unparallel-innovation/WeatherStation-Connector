@@ -2,23 +2,41 @@
     "connectors": [
         {
             "enabled": true,
-            "id": "Service-Connector-Example",
-            "provider": "random",
-            "parser": "passthrough",
-            "consumers": ["console", "mqtt"]
+            "id": "WS-1",
+            "sigfox_id": "YOUR-SIGFOX-ID-1",
+            "wunderground_id": "YOUR-WUNDERGROUND-ID-1",
+            "wunderground_pass": "YOUR-WUNDERGROUND-PASS-1",
+            "provider": "sigfox",
+            "parser": "sigfox_weather_station",
+            "consumers": ["console", "mqtt", "wunderground"]
+        },
+        {
+            "enabled": true,
+            "id": "WS-2",
+            "sigfox_id": "YOUR-SIGFOX-ID-2",
+            "wunderground_id": "YOUR-WUNDERGROUND-ID-2",
+            "wunderground_pass": "YOUR-WUNDERGROUND-PASS-2",
+            "provider": "sigfox",
+            "parser": "sigfox_weather_station",
+            "consumers": ["console", "mqtt", "wunderground"]
         }
     ],
 
     "providers": {
-        "random": {
+        "sigfox": {
             "enabled": true,
-            "file": "random.js"
+            "file": "sigfox.js",
+            "sigfox_user": "YOUR-SIGFOX-USER",
+            "sigfox_pass": "YOUR-SIGFOX-PASS"
         }
     },
 
     "parsers": {
         "passthrough": {
             "file": "passthrough.js"
+        },
+        "sigfox_weather_station": {
+            "file": "sigfox_weather_station.js"
         }
     },
 
@@ -30,12 +48,16 @@
         "mqtt": {
             "enabled": true,
             "file": "mqtt.js",
-            "mqtt_topic": "service-connector-topic",
             "mqtt_url": "mqtt://broker.hivemq.com ",
             "mqtt_port": 1883,
+            "mqtt_topic": "unparallel-weatherstation",
             "mqtt_username": "",
             "mqtt_password": "",
-            "mqtt_qos": 0
+            "mqtt_qos": 1
+        },
+        "wunderground": {
+            "enabled": true,
+            "file": "wunderground.js"
         }
     }
 }

@@ -1,17 +1,22 @@
 {
-    "name": "service-connector-template",
+    "name": "weatherstation-service-connector",
     "version": "1.0.0",
-    "description": "Template for using the service-connector package",
+    "description": "WeatherStation service connector. Get weather data from Sigfox and send to MQTT.",
     "license": "ISC",
-    "repository": "unparallel-innovation/Service-Connector-Template",
+    "repository": "unparallel-innovation/WeatherStation-Connector",
     "main": "start.js",
     "keywords": [
         "service",
         "connector",
-        "template"
+        "weather",
+        "weatherstation",
+        "sigfox",
+        "mqtt"
     ],
     "dependencies": {
         "service-connector": "^1.0.1",
-        "mqtt": "^4.2.8"
+        "mqtt": "^4.2.8",
+        "got": "^11.8.2",
+        "wunderground-pws": "^1.3.2"
     }
 }
