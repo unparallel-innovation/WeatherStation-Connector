@@ -1,0 +1,15 @@
+{
+    "name": "service-connector",
+    "version": "1.0.1",
+    "description": "Connect different services using a simple structure (providers, parsers and consumers)",
+    "license": "ISC",
+    "repository": "unparallel-innovation/Service-Connector-Core",
+    "main": "service-connector.js",
+    "keywords": [
+        "service",
+        "connector"
+    ],
+    "dependencies": {
+        "require-dir": "^1.2.0"
+    }
+}

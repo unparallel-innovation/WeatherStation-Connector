@@ -1,0 +1,41 @@
+{
+    "connectors": [
+        {
+            "enabled": true,
+            "id": "Service-Connector-Example",
+            "provider": "random",
+            "parser": "passthrough",
+            "consumers": ["console", "mqtt"]
+        }
+    ],
+
+    "providers": {
+        "random": {
+            "enabled": true,
+            "file": "random.js"
+        }
+    },
+
+    "parsers": {
+        "passthrough": {
+            "file": "passthrough.js"
+        }
+    },
+
+    "consumers": {
+        "console": {
+            "enabled": true,
+            "file": "console.js"
+        },
+        "mqtt": {
+            "enabled": true,
+            "file": "mqtt.js",
+            "mqtt_topic": "service-connector-topic",
+            "mqtt_url": "mqtt://broker.hivemq.com ",
+            "mqtt_port": 1883,
+            "mqtt_username": "",
+            "mqtt_password": "",
+            "mqtt_qos": 0
+        }
+    }
+}
