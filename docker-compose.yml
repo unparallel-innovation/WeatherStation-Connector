@@ -1,0 +1,5 @@
+version: "3"
+
+services:
+  weather-station-connector:
+    image: weather-station-connector
