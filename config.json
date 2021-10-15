@@ -48,7 +48,7 @@
         "mqtt": {
             "enabled": true,
             "file": "mqtt.js",
-            "mqtt_url": "mqtt://broker.hivemq.com ",
+            "mqtt_url": "mqtt://broker.hivemq.com",
             "mqtt_port": 1883,
             "mqtt_topic": "unparallel-weatherstation",
             "mqtt_username": "",
