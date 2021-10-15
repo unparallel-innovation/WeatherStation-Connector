@@ -3,7 +3,7 @@ const path = require('path');
 const mqtt = require('mqtt');
 
 
-function send(data, connector, options) {
+async function send(data, connector, options) {
     const topic = path.join(options.mqtt_topic, connector.id)
 
     const mqtt_config = {
@@ -17,9 +17,10 @@ function send(data, connector, options) {
     const client = mqtt.connect(options.mqtt_url, mqtt_config);
 
     for (const [key, value] of Object.entries(data)) {
-        client.publish(path.join(topic, key), value.toString(), { qos: options.mqtt_qos });
+        await client.publish(path.join(topic, key), value.toString(), { qos: options.mqtt_qos });
     }
 
+    await client.end();
     console.log('Sent to MQTT.');
 }
 
