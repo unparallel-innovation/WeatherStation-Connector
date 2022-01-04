@@ -84,9 +84,11 @@ docker stack rm weather-station-connector
 ## Related Repositories:
 *  [Unparallel WeatherStation PCB](https://github.com/unparallel-innovation/WeatherStation-PCB)
 *  [Unparallel WeatherStation Enclosure](https://github.com/unparallel-innovation/WeatherStation-Enclosure)
+*  [Unparallel WeatherStation Documentation](https://github.com/unparallel-innovation/WeatherStation-Documentation)
 *  [Unparallel WeatherStation Software](https://github.com/unparallel-innovation/WeatherStation-Software)
 *  [Service-Connector-Core](https://github.com/unparallel-innovation/Service-Connector-Core)
 *  [Service-Connector-Template](https://github.com/unparallel-innovation/Service-Connector-Template)
+
 
 
 ## Getting Support
